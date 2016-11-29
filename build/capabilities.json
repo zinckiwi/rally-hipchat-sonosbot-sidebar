@@ -1,0 +1,51 @@
+{
+    "name": "Sonosbot",
+    "description": "Sidebar addon for Maffandis Sonosbot",
+    "key": "sonosbot",
+    "links": {
+        "homepage": "https://s3.amazonaws.com/rallybots.zinckiwi.com/rally-hipchat-sonosbot-sidebar",
+        "self": "https://s3.amazonaws.com/rallybots.zinckiwi.com/rally-hipchat-sonosbot-sidebar/capabilities.json"
+    },
+    "capabilities": {
+        "hipchatApiConsumer": {
+            "scopes": [
+                "view_room"
+            ]
+        },
+        "installable": {
+            "allowGlobal": false,
+            "allowRoom": true,
+            "callbackUrl": "https://9ptaixi3s1.execute-api.us-east-1.amazonaws.com/dev/install"
+        },
+        "configurable": {
+            "url": "https://s3.amazonaws.com/rallybots.zinckiwi.com/rally-hipchat-sonosbot-sidebar/config.html"
+        },
+        "glance": [
+            {
+                "icon": {
+                    "url": "https://s3.amazonaws.com/rallybots.zinckiwi.com/rally-hipchat-sonosbot-sidebar/favicon.ico",
+                    "url@2x": "https://s3.amazonaws.com/rallybots.zinckiwi.com/rally-hipchat-sonosbot-sidebar/img/favicon.ico"
+                },
+                "key": "glance",
+                "name": {
+                    "value": "Sonos"
+                },
+                "queryUrl": "https://9ptaixi3s1.execute-api.us-east-1.amazonaws.com/dev/roomGlance",
+                "target": "songlist",
+                "conditions": [
+                ]
+            }
+        ],
+        "webPanel": [
+            {
+                "authentication": "none",
+                "key": "songlist",
+                "name": {
+                    "value": "Songs"
+                },
+                "url": "https://s3.amazonaws.com/rallybots.zinckiwi.com/rally-hipchat-sonosbot-sidebar/sidebar.html",
+                "location": "hipchat.sidebar.right"
+            }
+        ]
+    }
+}
